@@ -18,8 +18,9 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
-  terraform:  
+  run-windows-command:  
     runs-on: windows-latest
+    needs: ["run-shell-command"]
     steps:
       - name: DIrectory Powershell
         run: Get-Location
