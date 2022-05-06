@@ -1,0 +1,15 @@
+name: Git hub Actions
+
+on: push
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: java script actions
+        id: greets
+        uses: Actions/hello-world-javascript-action@v1
+        with: 
+          who-to-greet: chandan
+      - name: Logs greeting Time
+        run: echo "{{ steps.greets.outputs.time }}"
