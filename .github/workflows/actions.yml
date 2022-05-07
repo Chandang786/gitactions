@@ -6,10 +6,20 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: list file
+        run: |
+          pwd
+          ls
       - name: java script actions
         id: greets
         uses: Actions/hello-world-javascript-action@v1
         with: 
           who-to-greet: chandan
       - name: Logs greeting Time
-        run: echo "{{ steps.greets.outputs.time }}"
+        run: echo "${{ steps.greets.outputs.time }}"
+  run--windows:
+      runs-on: windows-latest
+      steps:
+        - name: running shell command
+          run: pwd
+          shell: bash
