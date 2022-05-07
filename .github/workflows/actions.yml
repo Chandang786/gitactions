@@ -8,9 +8,9 @@ jobs:
     steps:
       - name: environment variables
         run: |
-          echo $GITHUB_SHA 
-          echo $GITHUB_REPOSITRY
-          echo $GITHUB_WORKSPACE
+          echo "commit path $GITHUB_SHA "
+          echo "Github repo $GITHUB_REPOSITRY"
+          echo "Git hub workspace $GITHUB_WORKSPACE"
           echo "${{ github.token }}"
 
       - name: list file
