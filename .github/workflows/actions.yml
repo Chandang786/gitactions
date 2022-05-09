@@ -1,10 +1,10 @@
 name: Git hub Actions
 
-<<<<<<< HEAD
+
 #on: push
 on:
   schedule:
-    - cron: "0/1 * * * *"
+    - cron: "0/5 * * * *"
 
   #push:
   pull_request: 
