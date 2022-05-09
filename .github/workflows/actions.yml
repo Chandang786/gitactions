@@ -1,9 +1,20 @@
 name: Git hub Actions
 
+<<<<<<< HEAD
 #on: push
 on:
   schedule:
     - cron: "0/1 * * * *"
+
+  #push:
+  pull_request: 
+    types:
+      - opened
+      - closed
+      - reopened
+      - assigned 
+      
+#>>>>>>> aba6873a02450fe0012884dc42768c6567e5a409
 
 jobs:
   run-github-actions:
